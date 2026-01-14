@@ -9,5 +9,3 @@ spec:
     - port: 8000
       targetPort: 8000
   type: NodePort
-
-curl -X POST "http://127.0.0.1:60402/query" -G --data-urlencode "q=What is Kubernetes?"
