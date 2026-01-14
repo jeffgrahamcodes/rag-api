@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rag-app-service
+spec:
+  selector:
+    app: rag-api
+  ports:
+    - port: 8000
+      targetPort: 8000
+  type: NodePort
+
+curl -X POST "http://127.0.0.1:60402/query" -G --data-urlencode "q=What is Kubernetes?"
